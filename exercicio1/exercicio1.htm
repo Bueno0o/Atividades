@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Exercicio1</title>
+    <script>
+        function validar(n,e,s,d){
+            mensagem ="";
+            if(n!="" && e!="" && s!="" && d!=""){
+                mensagem += "Nome:"+n;
+                mensagem += "\nEmail:"+e;  
+                mensagem += "\nEmail:"+s;
+                mensagem += "\nData Nascimento:"+d;
+            }
+            else{
+                mensagem = "Falta preencher campos(s):";
+                if(n==""){
+                    mensagem += "\n-nome";
+                }
+                if(e==""){
+                    mensagem += "\e-email";
+                }
+                if(s==""){
+                    mensagem += "\s-sexo";
+                }
+                if(d==""){
+                    mensagem += "\d-data";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="formulario">
+        <input type="text" name="nome" /><br>
+        <input type="text" name="email" /><br>
+        Sexo: <input type="radio" name="sexo" value="m" />Masc.
+              <input type="radio" name="sexo" value="f" />Fem.<br>
+        Data de nascimento:<input type="date" name="data" /><br>
+            <input type="button" value="vaipfvr" onclick="verifica_cadastro(document.f.nome.value,document.f.emali.value,document.f.sexo.value,document.f.data.value);" />
+        </p>
+    </form>
+</body>
+</html>
