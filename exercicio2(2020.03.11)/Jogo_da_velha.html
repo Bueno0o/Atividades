@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Jogo da velha</title>
+    <script>
+        var cont =  0;
+        function aciona_onblur(valor){
+            cont += 1;
+            if(cont%2 == 0){
+                if(valor.value != "0"){
+                    valor.value = "0";
+                    posicao[cont] = valor.name; 
+                }
+            }else{
+                if(valor.value != "x" || valor.value != "X"){
+                    valor.value = "x";
+                    }
+                    if(cont == 1){
+                        posicao = new Array (0,0,0,0,0,0,0,0,0);
+                        posicao[cont] = valor.name;
+                    }else{
+                        posicao[cont] = valor.name;
+                    }
+            }
+            if(cont > 4){
+                    if(((posicao[2] == "c11" || posicao[4] == "c11" || posicao[6] == "c11" || posicao[8] == "c11") && (posicao[2] == "c12" || posicao[4] == "c12" || posicao[6] == "c12" || posicao[8] == "c12") && (posicao[2] == "c13" || posicao[4] == "c13" || posicao[6] == "c13" || posicao[8] == "c13")) ||
+                        ((posicao[2] == "c21" || posicao[4] == "c21" || posicao[6] == "c21" || posicao[8] == "c21") && (posicao[2] == "c22" || posicao[4] == "c22" || posicao[6] == "c22" || posicao[8] == "c22") && (posicao[2] == "c23" || posicao[4] == "c23" || posicao[6] == "c23" || posicao[8] == "c23")) ||
+                        ((posicao[2] == "c31" || posicao[4] == "c31" || posicao[6] == "c31" || posicao[8] == "c31") && (posicao[2] == "c32" || posicao[4] == "c32" || posicao[6] == "c32" || posicao[8] == "c32") && (posicao[2] == "c33" || posicao[4] == "c33" || posicao[6] == "c33" || posicao[8] == "c33")) ||
+                        ((posicao[2] == "c11" || posicao[4] == "c11" || posicao[6] == "c11" || posicao[8] == "c11") && (posicao[2] == "c21" || posicao[4] == "c21" || posicao[6] == "c21" || posicao[8] == "c21") && (posicao[2] == "c31" || posicao[4] == "c31" || posicao[6] == "c31" || posicao[8] == "c31")) ||
+                        ((posicao[2] == "c32" || posicao[4] == "c32" || posicao[6] == "c32" || posicao[8] == "c32") && (posicao[2] == "c22" || posicao[4] == "c22" || posicao[6] == "c22" || posicao[8] == "c22") && (posicao[2] == "c12" || posicao[4] == "c12" || posicao[6] == "c12" || posicao[8] == "c12")) ||
+                        ((posicao[2] == "c23" || posicao[4] == "c23" || posicao[6] == "c23" || posicao[8] == "c23") && (posicao[2] == "c33" || posicao[4] == "c33" || posicao[6] == "c33" || posicao[8] == "c33") && (posicao[2] == "c13" || posicao[4] == "c13" || posicao[6] == "c13" || posicao[8] == "c13")) ||
+                        ((posicao[2] == "c11" || posicao[4] == "c11" || posicao[6] == "c11" || posicao[8] == "c11") && (posicao[2] == "c22" || posicao[4] == "c22" || posicao[6] == "c22" || posicao[8] == "c22") && (posicao[2] == "c33" || posicao[4] == "c33" || posicao[6] == "c33" || posicao[8] == "c33")) ||
+                        ((posicao[2] == "c22" || posicao[4] == "c22" || posicao[6] == "c22" || posicao[8] == "c22") && (posicao[2] == "c31" || posicao[4] == "c31" || posicao[6] == "c31" || posicao[8] == "c31") && (posicao[2] == "c13" || posicao[4] == "c13" || posicao[6] == "c13" || posicao[8] == "c13"))
+                        ){
+                                alert("parabens o 0 ganhou o jogo!!");
+                        }
+                }
+            }
+        
+    </script>
+</head>
+<body>
+    <form name="f">
+        <br>
+            <center><h1>Começa com o x</h1><table border="2" >
+                <tr>
+                    <td><input type="text" name="c11" size="1" onblur="aciona_onblur(this)" ></td>
+                    <td><input type="text" name="c12" size="1" onblur="aciona_onblur(this)" ></td>
+                    <td><input type="text" name="c13" size="1" onblur="aciona_onblur(this)" ></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="c21" size="1" onblur="aciona_onblur(this)" ></td>
+                    <td><input type="text" name="c22" size="1" onblur="aciona_onblur(this)" ></td>
+                    <td><input type="text" name="c23" size="1" onblur="aciona_onblur(this)" ></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="c31" size="1" onblur="aciona_onblur(this)" ></td>
+                    <td><input type="text" name="c32" size="1" onblur="aciona_onblur(this)" ></td>
+                    <td><input type="text" name="c33" size="1" onblur="aciona_onblur(this)" ></td>
+                </tr>
+            </center></table>
+    </form>
+</body>
+</html>
