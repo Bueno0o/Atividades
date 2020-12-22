@@ -1,0 +1,17 @@
+--------------------------------------------------------------------------
+|A permisões se baseam ecatamente em 3 tipos
+|    Permisão 1(Admim)
+|        -Cadastrar os livros
+|        -Cadastrar os livreiros
+|        -Cadastrar os alunos
+|        -listar os livros(pode alterar e excluir)
+|        -listar os livreiros(pode alterar e excluir)
+|        -listar os alunos(pode alterar e excluir)
+|    Permisão 2(livreiros)
+|        -Cadastrar novos livros
+|        -listar todos livros(podendo alteralos, porém sem poder excluir)
+|        -poder alterar seus dados
+|    Permisão 3(aluno)
+|        -página de empréstimo de livros
+|        -vizualizar seus dados(sem poder alteralos)
+------------------------------------------------------------------------------
